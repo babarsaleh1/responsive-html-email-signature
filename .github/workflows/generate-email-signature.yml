@@ -25,6 +25,7 @@ jobs:
           MOBILE_PHONE_COUNTRY_CODE: ${{ secrets.MOBILE_PHONE_COUNTRY_CODE }}
           MOBILE_PHONE_NUMBER: ${{ secrets.MOBILE_PHONE_NUMBER }}
           THEME: dark
+   uses: actions/setup-node@v1
         run: |
           npm run generate:conf ${{ env.THEME }}
       - name: Install NPM and Generate Signature
